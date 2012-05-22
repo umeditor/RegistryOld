@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, success: 'Welcome to the RCT Registry' }
+        format.html { redirect_to @user, notice: 'Welcome to the RCT Registy' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
